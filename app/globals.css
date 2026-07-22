@@ -1,0 +1,170 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+   AICON'26 - Brand tokens
+   Primary BG   #122FA8   Secondary BG #7C0201
+   Gold accent  #FCDE58   Text         #FFFFFF
+   Borders      rgba(252,222,88,0.18)
+--------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-crimson: var(--crimson);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--gold);
+  --color-primary-foreground: var(--background);
+
+  --font-sans: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Trebuchet MS', 'Segoe UI', var(--font-sans);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #122fa8;
+  --foreground: #ffffff;
+  --surface: #0f2590;
+  --surface-2: #09196c;
+  --gold: #fcde58;
+  --gold-soft: rgba(252, 222, 88, 0.12);
+  --crimson: #7c0201;
+  --muted-foreground: #e2e7ff;
+  --border: rgba(252, 222, 88, 0.18);
+  --card: rgba(18, 47, 168, 0.38);
+  --card-foreground: #ffffff;
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--background);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .bg-aicon {
+    background:
+      radial-gradient(1200px 800px at 15% -10%, rgba(18, 47, 168, 0.92), transparent 60%),
+      radial-gradient(1000px 700px at 90% 0%, rgba(252, 222, 88, 0.08), transparent 55%),
+      radial-gradient(900px 900px at 80% 110%, rgba(124, 2, 1, 0.22), transparent 60%),
+      linear-gradient(180deg, #122fa8 0%, #0f2590 42%, #09196c 100%);
+  }
+
+  .grid-overlay {
+    background-image:
+      linear-gradient(to right, rgba(226, 231, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(226, 231, 255, 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%);
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(180deg, #ffffff 0%, #fcde58 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 0 1px rgba(252, 222, 88, 0.35),
+      0 0 40px -6px rgba(252, 222, 88, 0.55), 0 0 120px -20px rgba(252, 222, 88, 0.4);
+  }
+
+  .card-surface {
+    background: linear-gradient(160deg, rgba(18, 47, 168, 0.5), rgba(9, 25, 108, 0.24));
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+  }
+
+  .diagonal-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 32s linear infinite;
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  .animate-float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
