@@ -41,9 +41,9 @@ export function About() {
               {PILLARS.map((p) => (
                 <div
                   key={p.k}
-                  className="rounded-2xl border border-border bg-gold-soft/40 p-4"
+                  className="rounded-2xl border border-border brand-chip p-4"
                 >
-                  <dt className="font-display text-base font-semibold text-gold">
+                  <dt className="font-display text-base font-semibold text-gradient-brand">
                     {p.k}
                   </dt>
                   <dd className="mt-1 text-xs leading-snug text-muted-foreground">
@@ -57,6 +57,7 @@ export function About() {
 
         <Reveal delay={0.1} className="relative">
           <div className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-gold/10 blur-3xl" />
+          <div className="pointer-events-none absolute inset-8 rounded-[2.5rem] bg-crimson/10 blur-3xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-border card-surface">
             <Image
               src="/aicon/about-core.png"
@@ -66,9 +67,9 @@ export function About() {
               className="h-full w-full object-cover"
               priority={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#122fa8]/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
           </div>
-          <div className="absolute -bottom-5 -left-5 rounded-2xl border border-border bg-[#122fa8]/85 px-5 py-4 backdrop-blur-xl">
+          <div className="absolute -bottom-5 -left-5 rounded-2xl border border-border bg-background/85 px-5 py-4 backdrop-blur-xl">
             <p className="font-display text-2xl font-bold text-gold">SEECS</p>
             <p className="text-xs text-muted-foreground">Home base for AICON&apos;26</p>
           </div>

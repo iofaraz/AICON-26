@@ -51,7 +51,7 @@ export function Tracks() {
                 <p className="mt-1.5 text-xs leading-snug text-muted-foreground">
                   {tr.d}
                 </p>
-                <span className="mt-4 block h-px w-8 bg-gold transition-all duration-300 group-hover:w-full" />
+                <span className="mt-4 block h-px w-8 bg-gradient-to-r from-gold via-gold to-crimson transition-all duration-300 group-hover:w-full" />
               </motion.div>
             </Reveal>
           ))}

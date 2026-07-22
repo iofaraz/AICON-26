@@ -37,7 +37,7 @@ export function Navbar() {
         className={cn(
           'flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-5',
           scrolled
-            ? 'border border-border bg-[#122fa8]/78 backdrop-blur-xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.55)]'
+            ? 'border border-border bg-background/78 backdrop-blur-xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.55)]'
             : 'border border-transparent',
         )}
       >
@@ -62,7 +62,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#register"
-            className="group hidden items-center gap-1.5 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-background transition-shadow duration-300 hover:shadow-[0_0_30px_-4px_rgba(252,222,88,0.7)] sm:inline-flex"
+            className="group hidden items-center gap-1.5 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-background transition-shadow duration-300 hover:shadow-[0_0_30px_-4px_rgba(244,211,94,0.7)] sm:inline-flex"
           >
             Register
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -84,7 +84,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute inset-x-4 top-20 rounded-2xl border border-border bg-[#122fa8]/95 p-4 backdrop-blur-xl md:hidden"
+            className="absolute inset-x-4 top-20 rounded-2xl border border-border bg-background/95 p-4 backdrop-blur-xl md:hidden"
           >
             <ul className="flex flex-col">
               {LINKS.map((l) => (

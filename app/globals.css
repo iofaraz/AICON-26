@@ -5,9 +5,9 @@
 
 /* ---------------------------------------------------------------------------
    AICON'26 - Brand tokens
-   Primary BG   #122FA8   Secondary BG #7C0201
-   Gold accent  #FCDE58   Text         #FFFFFF
-   Borders      rgba(252,222,88,0.18)
+   Primary BG   #071C73   Secondary BG #0B2D9C
+   Gold accent  #F4D35E   Crimson      #8B0000
+   Text         #FFFFFF   Borders      rgba(244,211,94,0.18)
 --------------------------------------------------------------------------- */
 
 @theme inline {
@@ -37,16 +37,17 @@
 
 :root {
   color-scheme: dark;
-  --background: #122fa8;
+  --background: #071c73;
   --foreground: #ffffff;
-  --surface: #0f2590;
-  --surface-2: #09196c;
-  --gold: #fcde58;
-  --gold-soft: rgba(252, 222, 88, 0.12);
-  --crimson: #7c0201;
-  --muted-foreground: #e2e7ff;
-  --border: rgba(252, 222, 88, 0.18);
-  --card: rgba(18, 47, 168, 0.38);
+  --surface: #0b2d9c;
+  --surface-2: #071c73;
+  --gold: #f4d35e;
+  --gold-soft: rgba(244, 211, 94, 0.12);
+  --crimson: #8b0000;
+  --crimson-soft: rgba(139, 0, 0, 0.15);
+  --muted-foreground: #d6ddfb;
+  --border: rgba(244, 211, 94, 0.18);
+  --card: rgba(7, 28, 115, 0.38);
   --card-foreground: #ffffff;
   --radius: 1rem;
 }
@@ -80,10 +81,10 @@
 
   .bg-aicon {
     background:
-      radial-gradient(1200px 800px at 15% -10%, rgba(18, 47, 168, 0.92), transparent 60%),
-      radial-gradient(1000px 700px at 90% 0%, rgba(252, 222, 88, 0.08), transparent 55%),
-      radial-gradient(900px 900px at 80% 110%, rgba(124, 2, 1, 0.22), transparent 60%),
-      linear-gradient(180deg, #122fa8 0%, #0f2590 42%, #09196c 100%);
+      radial-gradient(1200px 800px at 15% -10%, rgba(7, 28, 115, 0.94), transparent 60%),
+      radial-gradient(1000px 700px at 90% 0%, rgba(244, 211, 94, 0.08), transparent 55%),
+      radial-gradient(900px 900px at 80% 110%, rgba(139, 0, 0, 0.2), transparent 60%),
+      linear-gradient(180deg, #071c73 0%, #0b2d9c 42%, #071c73 100%);
   }
 
   .grid-overlay {
@@ -100,21 +101,42 @@
   }
 
   .text-gradient-gold {
-    background: linear-gradient(180deg, #ffffff 0%, #fcde58 130%);
+    background: linear-gradient(180deg, #ffffff 0%, #f4d35e 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #ffffff 0%, #f4d35e 62%, #8b0000 140%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .glow-gold {
-    box-shadow: 0 0 0 1px rgba(252, 222, 88, 0.35),
-      0 0 40px -6px rgba(252, 222, 88, 0.55), 0 0 120px -20px rgba(252, 222, 88, 0.4);
+    box-shadow: 0 0 0 1px rgba(244, 211, 94, 0.35),
+      0 0 40px -6px rgba(244, 211, 94, 0.55), 0 0 120px -20px rgba(244, 211, 94, 0.4);
+  }
+
+  .glow-crimson {
+    box-shadow: 0 0 0 1px rgba(139, 0, 0, 0.3),
+      0 0 36px -10px rgba(139, 0, 0, 0.55), 0 0 90px -24px rgba(139, 0, 0, 0.35);
   }
 
   .card-surface {
-    background: linear-gradient(160deg, rgba(18, 47, 168, 0.5), rgba(9, 25, 108, 0.24));
+    background: linear-gradient(160deg, rgba(11, 45, 156, 0.52), rgba(7, 28, 115, 0.22));
     border: 1px solid var(--border);
     backdrop-filter: blur(12px);
+  }
+
+  .brand-rule {
+    background: linear-gradient(90deg, transparent, rgba(244, 211, 94, 0.85), rgba(139, 0, 0, 0.85), transparent);
+  }
+
+  .brand-chip {
+    background: linear-gradient(135deg, rgba(244, 211, 94, 0.16), rgba(139, 0, 0, 0.16));
+    border: 1px solid rgba(244, 211, 94, 0.24);
   }
 
   .diagonal-clip {

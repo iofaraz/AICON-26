@@ -20,12 +20,12 @@ export default function Page() {
       <Navbar />
       <main className="relative bg-aicon">
         <Hero />
+        <Stats />
         <About />
         <Highlights />
         <Tracks />
         <Timeline />
         <Speakers />
-        <Stats />
         <Gallery />
         <Sponsors />
         <Cta />

@@ -32,11 +32,13 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-32 top-1/4 -z-10 h-[440px] w-[440px] rotate-45 rounded-[3rem] border border-border opacity-35" />
       <div className="pointer-events-none absolute right-[-8rem] top-8 -z-10 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-1/4 -z-10 h-72 w-72 rounded-full bg-crimson/20 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-24 -z-10 h-56 w-56 -translate-x-1/2 rounded-full bg-crimson/10 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-24 -z-10 h-px brand-rule opacity-50" />
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div variants={item}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-gold-soft px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border brand-chip px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
               <Sparkles className="h-3.5 w-3.5" />
               NUST SEECS x GDGoC x ACM x NEC x NHC
             </span>
@@ -111,6 +113,7 @@ export function Hero() {
           className="relative mx-auto aspect-square w-full max-w-[500px]"
         >
           <div className="absolute inset-0 rounded-full bg-gold/10 blur-3xl" />
+          <div className="absolute inset-[12%] rounded-full bg-crimson/10 blur-3xl" />
           <div className="absolute inset-0 animate-float-slow">
             <NeuralCore />
           </div>

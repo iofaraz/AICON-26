@@ -14,9 +14,10 @@ export function AiconWordmark({ className }: { className?: string }) {
           priority
         />
       </span>
+      <span className="h-10 w-px bg-gradient-to-b from-transparent via-crimson to-transparent opacity-80" aria-hidden="true" />
       <span className="flex flex-col leading-none">
         <span className="font-display text-lg font-bold tracking-tight text-foreground">
-          AICON<span className="text-gold">&apos;26</span>
+          <span className="text-gradient-brand">AICON&apos;26</span>
         </span>
         <span className="text-[10px] font-medium uppercase tracking-[0.34em] text-muted-foreground">
           NUST SEECS

@@ -44,7 +44,7 @@ export function ScrollProgress() {
   return (
     <motion.div
       style={{ scaleX }}
-      className="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left bg-gold"
+      className="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left brand-rule"
       aria-hidden="true"
     />
   )
@@ -61,11 +61,11 @@ export function SectionLabel({
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-2 rounded-full border border-border bg-gold-soft px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold',
+        'inline-flex items-center gap-2 rounded-full border border-border brand-chip px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold',
         className,
       )}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-glow" />
+      <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-gold to-crimson animate-pulse-glow" />
       {children}
     </span>
   )

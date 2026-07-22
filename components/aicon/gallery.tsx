@@ -40,8 +40,9 @@ export function Gallery() {
               sizes="(max-width: 640px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#122fa8]/70 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-30" />
             <span className="absolute inset-0 ring-1 ring-inset ring-gold/0 transition-all duration-300 group-hover:ring-gold/40" />
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-gold via-gold to-crimson opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Reveal>
         ))}
       </div>

@@ -70,10 +70,11 @@ export function Speakers() {
                   height={600}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#122fa8] via-[#122fa8]/20 to-transparent" />
-                <div className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-[#122fa8]/70 text-gold backdrop-blur-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                <div className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-gold backdrop-blur-md">
                   <ShieldCheck className="h-4 w-4" />
                 </div>
+                <div className="absolute inset-x-0 bottom-0 h-1 brand-rule opacity-70" />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-5">
                 <h3 className="font-display text-lg font-semibold">{sp.name}</h3>

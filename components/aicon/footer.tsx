@@ -25,7 +25,8 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-border">
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,transparent,rgba(18,47,168,0.25))]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,transparent,rgba(7,28,115,0.28))]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px brand-rule opacity-60" />
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_1fr_1.2fr]">
           <div>
@@ -40,7 +41,7 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-gold/50 hover:text-gold"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-crimson/50 hover:text-gold"
                 >
                   <s.icon className="h-4 w-4" />
                 </a>

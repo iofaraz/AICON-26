@@ -43,7 +43,7 @@ function Row({ q, a, i }: { q: string; a: string; i: number }) {
           <motion.span
             animate={{ rotate: open ? 45 : 0 }}
             transition={{ duration: 0.3 }}
-            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-gold"
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border brand-chip text-gold"
           >
             <Plus className="h-4 w-4" />
           </motion.span>
@@ -56,6 +56,7 @@ function Row({ q, a, i }: { q: string; a: string; i: number }) {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             >
+              <div className="mx-6 h-px brand-rule opacity-60" />
               <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
                 {a}
               </p>

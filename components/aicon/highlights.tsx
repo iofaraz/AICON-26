@@ -76,8 +76,8 @@ export function Highlights() {
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               className="group relative h-full overflow-hidden rounded-2xl border border-border card-surface p-6"
             >
-              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-gold-soft text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-background">
+              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-crimson/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-border brand-chip text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-background">
                 <it.icon className="h-5 w-5" />
               </span>
               <h3 className="mt-5 font-display text-xl font-semibold">{it.title}</h3>
