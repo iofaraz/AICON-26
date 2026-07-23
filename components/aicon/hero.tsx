@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { motion } from 'motion/react'
 import { ArrowRight, Sparkles, MapPin, CalendarDays, Users2 } from 'lucide-react'
 import { MagneticButton } from './magnetic-button'
@@ -23,19 +24,29 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[92vh] items-center overflow-hidden pt-24 pb-12 sm:pt-28"
+      className="hero relative isolate flex min-h-[92vh] items-center overflow-hidden pt-24 pb-12 sm:pt-28"
     >
-      <div className="absolute inset-0 -z-20 bg-aicon" />
-      <div className="absolute inset-0 -z-10 grid-overlay" />
-      <div className="pointer-events-none absolute inset-0 -z-10 noise opacity-[0.035]" />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/aicon/hero-bg.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+      <div className="absolute inset-0 z-[1] bg-background/35" />
+      <div className="absolute inset-0 z-[2] grid-overlay" />
+      <div className="pointer-events-none absolute inset-0 z-[2] noise opacity-[0.035]" />
 
-      <div className="pointer-events-none absolute -left-32 top-1/4 -z-10 h-[440px] w-[440px] rotate-45 rounded-[3rem] border border-border opacity-35" />
-      <div className="pointer-events-none absolute right-[-8rem] top-8 -z-10 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/4 -z-10 h-72 w-72 rounded-full bg-crimson/20 blur-3xl" />
-      <div className="pointer-events-none absolute left-1/2 top-24 -z-10 h-56 w-56 -translate-x-1/2 rounded-full bg-crimson/10 blur-3xl" />
-      <div className="pointer-events-none absolute inset-x-0 top-24 -z-10 h-px brand-rule opacity-50" />
+      <div className="pointer-events-none absolute -left-32 top-1/4 z-[2] h-[440px] w-[440px] rotate-45 rounded-[3rem] border border-border opacity-35" />
+      <div className="pointer-events-none absolute right-[-8rem] top-8 z-[2] h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/4 z-[2] h-72 w-72 rounded-full bg-crimson/20 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-24 z-[2] h-56 w-56 -translate-x-1/2 rounded-full bg-crimson/10 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-24 z-[2] h-px brand-rule opacity-50" />
 
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative z-[3] mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2 rounded-full border border-border brand-chip px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
@@ -124,7 +135,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 z-[3] -translate-x-1/2"
       >
         <div className="flex h-9 w-6 items-start justify-center rounded-full border border-border p-1.5">
           <motion.span
